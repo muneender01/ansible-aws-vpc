@@ -43,20 +43,20 @@
           Name: vprofile_pubsub2
         register: pubsub2_out
 
-        - name: create Public subnet 3 in zone3
-          ec2_vpc_subnet:
-            vpc_id: "{{ vpcout.vpc.id }}"
-            region: "{{ region }}"
-            az: "{{ zone3 }}"
-            state: "{{state}}"
-            cidr: "{{ PubSub3Cidr }}"
-            map_public: yes
-            resource_tags:
-              Name: vprofile_pubsub3
+    - name: create Public subnet 3 in zone3
+      ec2_vpc_subnet:
+              vpc_id: "{{ vpcout.vpc.id }}"
+              region: "{{ region }}"
+              az: "{{ zone3 }}"
+              state: "{{state}}"
+              cidr: "{{ PubSub3Cidr }}"
+              map_public: yes
+              resource_tags:
+                Name: vprofile_pubsub3
             register: pubsub3_out
 
-        - name: create Private Subnet 1 in Zone1
-          ec2_vpc_subnet:
+    - name: create Private Subnet 1 in Zone1
+      ec2_vpc_subnet:
             vpc_id: "{{ vpcout.vpc.id }}"
             region: "{{ region }}"
             az: "{{ zone1 }}"
@@ -66,8 +66,8 @@
               Name: vprofile_privsub1
             register: privsub1_out
 
-        - name: create Private subnet 2 in zone2
-          ec2_vpc_subnet:
+    - name: create Private subnet 2 in zone2
+      ec2_vpc_subnet:
             vpc_id: "{{ vpcout.vpc.id }}"
             region: "{{ region }}"
             az: "{{ zone2 }}"
@@ -79,8 +79,8 @@
 
 
 
-       - name: create Private subnet 3 in zone3
-         ec2_vpc_subnet:
+    - name: create Private subnet 3 in zone3
+      ec2_vpc_subnet:
            vpc_id: "{{ vpcout.vpc.id }}"
            region: "{{ region }}"
            az: "{{ zone3 }}"
