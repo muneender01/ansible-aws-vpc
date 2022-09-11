@@ -7,5 +7,9 @@ privsub2id: subnet-02e937870108f9403
 privsub3id: subnet-0705e4387b32bf8b9
 igwid: igw-00246af74778b9b84
 pubRTid: rtb-09f507c2d94ad5b37
-NATGWid: nat-02f1957bbd924d71a
+NATGWid: nat-0caf0075fd3f21948
 privRTid: rtb-0746f1987c7a8b6b1
+
+# Bastion Vars
+bastion_ami: ami-03657b56516ab7912
+MYIP: 49.37.131.166/32
