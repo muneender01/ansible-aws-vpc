@@ -9,3 +9,7 @@ igwid: igw-00246af74778b9b84
 pubRTid: rtb-09f507c2d94ad5b37
 NATGWid: nat-0caf0075fd3f21948
 privRTid: rtb-0746f1987c7a8b6b1
+
+# Bastion Vars
+bastion_ami: ami-03657b56516ab7912
+MYIP: 49.37.131.166/32
